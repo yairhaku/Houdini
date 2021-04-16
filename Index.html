@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JavaScript</title>
+</head>
+<body>
+    <script>
+
+    </script>
+
+    <h1>Olá, viajante</h1>
+    <h2>Vamos jogar um jogo...</h2> 
+    <h3>Pensa num número entre <span id="minNum"></span> e <span id="maxNum"></span></h3>
+    <h3>Eu acho que o número que pensaste foi: <span id="numero"></span></h3>
+<hr>
+<h3>O número é:</h3>
+    <button onclick="maior()">É maior!</button>
+    <button onclick="menor()">É menor!</button>
+    <button onclick="acertou()">É esse mesmo!</button>
+    <hr>
+    <h1 id="genio"></h1>
+
+    <script>
+        var minNum = 10;
+        var maxNum = 40;
+        var tentativa = Math.round((minNum + maxNum) / 2);
+
+        document.getElementById("minNum").innerHTML = minNum;
+        document.getElementById("maxNum").innerHTML = maxNum;
+
+        var maior = function()
+        {
+          var minNum = tentativa;
+          var maxNum = maxNum;
+        }
+        var menor = function()
+        {
+          var  maxNum = tentativa;
+          var  minNum = minNum;
+        }
+        var acertou = function()
+        {
+        document.getElementById("genio").innerHTML = "SOU UM GÊNIO!";
+        }
+    </script>
+</body>
+</html>
